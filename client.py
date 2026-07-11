@@ -2,16 +2,20 @@ import asyncio
 import os
 
 from fastmcp import Client
-from fastmcp.client.transports import StdioTransport
+#from fastmcp.client.transports import StdioTransport
 
 SERVER_FILE = os.path.join(
     os.path.dirname(__file__),
     "server.py"
 )
 
-transport = StdioTransport(
-    command="fastmcp",
-    args=["run", SERVER_FILE]
+# transport = StdioTransport(
+#     command="fastmcp",
+#     args=["run", SERVER_FILE]
+# )
+
+client = Client(
+    "https://jira-mcp-server-ckgn.onrender.com/mcp"
 )
 
 client = Client(transport)
