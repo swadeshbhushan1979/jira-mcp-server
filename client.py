@@ -18,7 +18,7 @@ client = Client(
     "https://jira-mcp-server-ckgn.onrender.com/mcp"
 )
 
-client = Client(transport)
+#client = Client(transport)
 
 
 async def create_task(summary, description):
