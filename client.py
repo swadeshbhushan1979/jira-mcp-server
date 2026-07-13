@@ -1,7 +1,12 @@
 import asyncio
 import os
 
-from fastmcp import Client
+print("=" * 80)
+print("CUSTOM CLIENT.PY LOADED")
+print("FILE:", __file__)
+print("=" * 80)
+
+from fastmcp import Client, __version__
 #from fastmcp.client.transports import StdioTransport
 
 SERVER_FILE = os.path.join(
@@ -14,9 +19,11 @@ SERVER_FILE = os.path.join(
 #     args=["run", SERVER_FILE]
 # )
 
-client = Client(
-    "https://jira-mcp-server-ckgn.onrender.com/mcp"
-)
+print("FastMCP Version:", __version__)
+
+client = Client("https://jira-mcp-server-ckgn.onrender.com/mcp")
+
+print("CLIENT CREATED")
 
 #client = Client(transport)
 
